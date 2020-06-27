@@ -1111,7 +1111,7 @@ InsteonLocalAccessory.prototype.setBrightnessLevel = function(level, callback) {
 
 		hub.directCommand(self.id, cmd, timeout, function(error, status) {
 			if(error){
-				self.log('Error setting level of ' + self.name)
+				self.log('Error setting level of ' + self.name + ', error: ' + error)
 				self.getStatus.call(self)
 
 				if (typeof callback !== 'undefined') {
